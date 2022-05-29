@@ -1,11 +1,8 @@
-# Keycloak
+# Keycloak legacy container image
 
 Keycloak is an Open Source Identity and Access Management solution for modern Applications and Services.
 
-This repository contains Docker images related to Keycloak.
-
-- [keycloak](https://hub.docker.com/r/jboss/keycloak) Keycloak server
-- [keycloak-adapter-wildfly](https://hub.docker.com/r/jboss/keycloak-adapter-wildfly) WildFly including Keycloak adapter
+This repository contains Docker images related to the legacy WildFly distribution of Keycloak. For the new Quarkus based distribution check out the new [container guide](https://www.keycloak.org/server/containers).
 
 
 ## Help and Documentation
@@ -13,7 +10,6 @@ This repository contains Docker images related to Keycloak.
 * [Keycloak server image documentation](server/README.md)
 * [Documentation](https://www.keycloak.org/documentation.html)
 * [User Mailing List](https://groups.google.com/d/forum/keycloak-user) - Mailing list for help and general questions about Keycloak
-* [JIRA](https://issues.jboss.org/projects/KEYCLOAK) - Issue tracker for bugs and feature requests
 
 
 ## Reporting Security Vulnerabilities
@@ -23,7 +19,7 @@ If you've found a security vulnerability, please look at the [instructions on ho
 
 ## Reporting an issue
 
-If you believe you have discovered a defect in Keycloak please open an issue in our [Issue Tracker](https://issues.jboss.org/projects/KEYCLOAK).
+If you believe you have discovered a defect in Keycloak please open [an issue](https://github.com/keycloak/keycloak-containers/issues).
 Please remember to provide a good summary, description as well as steps to reproduce the issue.
 
 
@@ -31,9 +27,15 @@ Please remember to provide a good summary, description as well as steps to repro
 
 To run Keycloak, run:
 
-    docker run jboss/keycloak
+    docker run quay.io/keycloak/keycloak start-dev
+
+Or, to run the legacy WildFly distribution, run:
+
+    docker run quay.io/keycloak/keycloak:legacy
+
+For more details refer to the [container guide](https://www.keycloak.org/server/containers).
     
-For more details refer to the [Keycloak server image documentation](server/README.md).
+Or, for the legacy WildFly distribution refer to the [Keycloak server image documentation](server/README.md).
 
 
 ## Contributing
